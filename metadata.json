@@ -1,0 +1,6 @@
+{
+  "name": "Ethical Hacking Labs",
+  "description": "An elite, production-quality educational laboratory environment and security repository designed for learning, practicing, and mastering modern ethical hacking, system administration, and security automation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

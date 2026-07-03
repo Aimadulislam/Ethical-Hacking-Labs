@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # Educational Web Application Target
+  vulnerable-target:
+    build:
+      context: ./vulnerable-app
+      dockerfile: Dockerfile
+    container_name: hacking_lab_target
+    ports:
+      - "127.0.0.1:8080:80"
+    environment:
+      - APP_ENV=production
+      - DB_USER=lab_user
+      - DB_PASS=lab_secret_pass
+    restart: always
+    networks:
+      - hacking_lab_net
+
+networks:
+  hacking_lab_net:
+    driver: bridge
+    internal: true # Isolates practice targets from standard external ingress
