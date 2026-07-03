@@ -1,0 +1,37 @@
+name: CI Audit Check Sequence
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    name: Code Quality and Lint Validation
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Clone Repository
+      uses: actions/checkout@v4
+
+    - name: Verify Environment Setup Script
+      run: |
+        chmod +x scripts/setup.sh
+        ./scripts/setup.sh --diagnose
+
+    - name: ShellCheck Bash Utilities
+      run: |
+        sudo apt-get install -y shellcheck
+        shellcheck scripts/port_scanner.sh
+        shellcheck scripts/permission_audit.sh
+
+    - name: Setup Python Runtime
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Validate Python Coding Guidelines
+      run: |
+        python -m pip install --upgrade pip
+        python -m py_compile tools/file_integrity.py tools/log_analyzer.py
