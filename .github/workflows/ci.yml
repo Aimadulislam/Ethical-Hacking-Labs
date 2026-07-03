@@ -37,5 +37,6 @@ jobs:
 
     - name: Run Bash Script Integration Tests
       run: |
+        chmod +x scripts/*.sh
         chmod +x tests/test_scripts.sh
         ./tests/test_scripts.sh
