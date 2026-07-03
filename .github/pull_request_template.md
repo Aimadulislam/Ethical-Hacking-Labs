@@ -1,16 +1,18 @@
 ## Description
-Describe the educational purpose or fix proposed in this Pull Request.
+Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context.
 
-## Kind of Change
-- [ ] New laboratory manual (`labs/`)
-- [ ] Script enhancement or defensive automation (`scripts/`)
-- [ ] Theoretical documentation fix (`docs/`)
-- [ ] Container security updates (`docker/`)
+Fixes # (issue)
 
-## Verification Steps Performed
-List the commands run to verify changes (e.g., `./scripts/setup.sh`, `shellcheck`, etc.).
-1. 
+## Type of Change
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] Documentation update
 
-## Security Alignment Confirmation
-- [ ] I confirm this contribution does not contain any functional malware, reverse shell exploits targeting external networks, brute-forcers targeting unauthorized endpoints, or un-isolated payload tools.
-- [ ] Code strictly centers on defensive logs, permissions audits, or simulated sandbox lessons on localhost.
+## Checklist:
+- [ ] My code follows the code style of this project (`ShellCheck` for Bash, `PEP 8` for Python).
+- [ ] I have performed a self-review of my own code.
+- [ ] I have commented my code, particularly in hard-to-understand areas.
+- [ ] I have made corresponding changes to the documentation.
+- [ ] My changes generate no new warnings or linting errors.
+- [ ] I have verified my code by running local unittests (`python3 -m unittest discover tests`).

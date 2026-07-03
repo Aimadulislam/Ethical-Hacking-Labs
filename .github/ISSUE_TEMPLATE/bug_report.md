@@ -1,26 +1,27 @@
 ---
-name: Bug Report
-about: Create a report to help us improve script compatibility or manual errors.
-title: "[BUG] "
-labels: bug
-assignees: ''
+name: "🐛 Bug Report"
+about: Report a bug or issue with the lab setup or scripts to help us improve.
+title: "[BUG] <Short description of the bug>"
+labels: bug, triage
+assignees: ""
 ---
 
-**Describe the Bug**
-A clear description of what the error is (e.g. script syntax failure, docker container crash, etc).
+### Describe the Bug
+A clear and concise description of what the bug is.
 
-**To Reproduce**
+### Steps to Reproduce
 Steps to reproduce the behavior:
-1. Run script `./scripts/...`
-2. See error message '...'
+1. Run command '...'
+2. See error '...'
 
-**Expected Behavior**
-A clear description of what you expected to happen.
+### Expected Behavior
+A clear and concise description of what you expected to happen.
 
-**Diagnostic Logs / Output**
-Provide CLI logs or terminal copy-pastes if applicable.
+### System Information
+* **OS**: [e.g., Kali Linux, Ubuntu 22.04]
+* **Docker Version**: [e.g., 20.10.12]
+* **Python Version**: [e.g., 3.10.4]
+* **Shell**: [e.g., Bash 5.1.16]
 
-**Environment (please complete the following information):**
-- OS: [e.g. Kali Linux 2024.1, Ubuntu 22.04 LTS, WSL2]
-- Docker Version: [e.g. 25.0.3]
-- Bash Version: [e.g. 5.1.16]
+### Additional Context
+Add any other context, logs, or screenshots about the problem here.

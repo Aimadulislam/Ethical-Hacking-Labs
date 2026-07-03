@@ -1,0 +1,69 @@
+site_name: Secure Sandbox — Ethical Hacking Labs Workstation
+site_url: https://github.com/aimadulislam/Secure-Sandbox-Ethical-Hacking-Labs
+site_description: An elite educational laboratory environment and sandbox workstation for cybersecurity researchers.
+site_author: Lead Security Practitioner
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: sky
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: cyan
+      accent: sky
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - code.copy
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: getting_started/overview.md
+    - Installation: getting_started/installation.md
+    - Quick Start: getting_started/quickstart.md
+  - Lab Manuals:
+    - Introduction: labs/introduction.md
+    - Lab 01 (Linux Basics): labs/lab01_linux.md
+    - Lab 02 (Networking): labs/lab02_networking.md
+    - Lab 03 (Enumeration): labs/lab03_enumeration.md
+    - Lab 04 (Vuln Assessment): labs/lab04_vuln_assessment.md
+    - Lab 05 (Web Security): labs/lab05_web_security.md
+    - Lab 06 (Linux PrivEsc): labs/lab06_linux_privesc.md
+    - Lab 07 (Windows PrivEsc): labs/lab07_win_privesc.md
+    - Lab 08 (Docker Security): labs/lab08_docker.md
+    - Lab 09 (Reporting Guide): labs/lab09_reporting.md
+    - Lab 10 (CTF Playbook): labs/lab10_ctf_workflow.md
+  - User & Admin Guides:
+    - User Guide: guides/user_guide.md
+    - Administrator Guide: guides/admin_guide.md
+    - Developer Guide: guides/developer_guide.md
+  - Reference:
+    - CLI & Tool Reference: reference/cli_reference.md
+    - API Reference: reference/api_reference.md
+    - Glossary: reference/glossary.md
+    - Frequently Asked Questions: reference/faq.md
+  - Release Notes: release_notes.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_mermaid
+  - tables
+  - admonition
