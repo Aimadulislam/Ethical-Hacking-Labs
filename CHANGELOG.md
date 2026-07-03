@@ -15,3 +15,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Isolated Docker-Compose simulation targets for local web pentesting practice
 - Report templates in `/templates` for professional CTF and pentesting documentation
 - Configuration profiles inside `/config`
+- Comprehensive python unit testing suites for log parsers and file integrity monitors (`tests/test_file_integrity.py`, `tests/test_log_analyzer.py`)
+- Automated bash script verification test framework (`tests/test_scripts.sh`) ensuring robust execution bounds
+- Full continuous integration (CI) tests running directly on commits and pull requests via GitHub Actions
