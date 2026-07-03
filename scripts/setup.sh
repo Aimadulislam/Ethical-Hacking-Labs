@@ -65,12 +65,25 @@ check_tool() {
         return 0
     else
         log_warning "Missing recommended tool: $1"
-        return 1
+        return 0
+    fi
+}
+
+check_docker_compose() {
+    if command -v docker-compose &> /dev/null; then
+        log_success "Found required tool: docker-compose"
+        return 0
+    elif command -v docker &> /dev/null && docker compose version &> /dev/null; then
+        log_success "Found required tool: docker compose"
+        return 0
+    else
+        log_warning "Missing recommended tool: docker-compose"
+        return 0
     fi
 }
 
 check_tool "docker"
-check_tool "docker-compose" || check_tool "docker compose"
+check_docker_compose
 check_tool "python3"
 check_tool "pip3"
 
