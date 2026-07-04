@@ -788,7 +788,7 @@ export default function App() {
   
   // Interactive File Explorer state
   const [selectedFilePath, setSelectedFilePath] = useState<string>("README.md");
-  const [fileSearchTerm, setFileSearchTerm] = useState<string>("").trim();
+  const [fileSearchTerm, setFileSearchTerm] = useState<string>("");
 
   // Compliance & Governance States
   const [complianceItems, setComplianceItems] = useState([
